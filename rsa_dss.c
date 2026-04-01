@@ -14,9 +14,9 @@ int gcd(int a , int b)
 
 int modInverse(int e,  int phi)
 {
-    for(int i = 0 ; i<phi ; i++)
+    for(int i = 1 ; i<phi ; i++)
     {
-        if((e*i)==1)
+        if((e*i)%phi==1)
         {
             return i;
         }
@@ -79,4 +79,6 @@ int main()
     printf("\nHash: %d",hash);
     printf("\nSignature: %d",sign);
     printf("\nVerification: %d",verify);
+
+    return 0;
 }
